@@ -12,6 +12,8 @@ from PIL import Image
 from keras.models import Model, load_model
 from keras.layers import Dense, Flatten, Dropout, GlobalAveragePooling2D
 import streamlit as st
+import hashlib
+import sqlite3
 import matplotlib.pyplot as plt
 showpred = 0
 def apply_window(image, center, width):
@@ -82,7 +84,7 @@ def get_model():
 
 # Security
 #passlib,hashlib,bcrypt,scrypt
-import hashlib
+
 def make_hashes(password):
 	return hashlib.sha256(str.encode(password)).hexdigest()
 
@@ -91,7 +93,7 @@ def check_hashes(password,hashed_text):
 		return hashed_text
 	return False
 # DB Management
-import sqlite3 
+
 conn = sqlite3.connect('data.db')
 c = conn.cursor()
 # DB  Functions
