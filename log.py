@@ -11,7 +11,6 @@ from keras.applications.xception import Xception
 from PIL import Image
 from keras.models import Model, load_model
 from keras.layers import Dense, Flatten, Dropout, GlobalAveragePooling2D
-import streamlit as st
 import hashlib
 import sqlite3
 import matplotlib.pyplot as plt
