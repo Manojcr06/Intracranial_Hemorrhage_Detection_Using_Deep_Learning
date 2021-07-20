@@ -141,7 +141,7 @@ elif choice == "Login":
         hashed_pswd = make_hashes(password)
         result = login_user(username,check_hashes(password,hashed_pswd))
         if result:
-            st.success("Logged In as {}".format(username))
+            st.success("Logged In as {}".format(username.upper()))
             task = st.selectbox("Detect",["Brain ICH","Profiles"])
             if task == "Brain ICH":
                 uploaded_file = st.file_uploader("Choose an image...", type="dcm")
