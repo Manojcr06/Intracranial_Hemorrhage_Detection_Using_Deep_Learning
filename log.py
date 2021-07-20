@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+#from keras.preprocessing.image import load_img
+#from keras.preprocessing.image import img_to_array
 import numpy as np
-import os
-import cv2
+#import os
+#import cv2
 import pydicom
-from keras.models import Sequential
+#from keras.models import Sequential
 from keras.applications.xception import Xception
 from PIL import Image
 from keras.models import Model, load_model
