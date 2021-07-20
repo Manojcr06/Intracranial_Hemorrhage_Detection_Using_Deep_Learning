@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 import os
-import cv2
+#import cv2
 import pydicom
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.applications.xception import Xception
@@ -45,7 +45,7 @@ def save_and_resize(dcm):
     image = apply_window_policy(image[0])
     image -= image.min((0,1))
     image = (255*image).astype(np.uint8)
-    image = cv2.resize(image, (299, 299)) #smaller
+    #image = cv2.resize(image, (299, 299)) #smaller
     #res = cv2.imwrite(image)
     return image
 
